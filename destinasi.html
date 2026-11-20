@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinasi Wisata - JelajahIn</title>
+    <link rel="stylesheet" href="vanilla.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">JelajahIn</a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="destinasi.html">Paket Wisata</a></li>
+                <li><a href="index.html#testimoni">Testimoni</a></li>
+                <li><a href="index.html#artikel">Artikel</a></li>
+            </ul>
+
+            <div class="nav-button">
+                <a href="#">Masuk</a>
+                <a href="#">Daftar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+
+        <!-- Judul Halaman -->
+        <section class="destination-banner">
+            <h1>Jelajahi Destinasi Wisata</h1>
+            <p>
+                Temukan berbagai tempat wisata menarik
+                dan nikmati keindahan alam Indonesia.
+            </p>
+        </section>
+
+        <!-- Pencarian Destinasi -->
+        <section class="destination-search">
+
+            <h2>Cari Destinasi Favoritmu</h2>
+
+            <form>
+                <div class="search-item">
+                    <label for="search-location">Nama Destinasi</label>
+                    <input
+                        type="text"
+                        id="search-location"
+                        name="search-location"
+                        placeholder="Cari tempat wisata..."
+                    >
+                </div>
+
+                <div class="search-item">
+                    <label for="search-category">Kategori Wisata</label>
+                    <select id="search-category" name="category">
+                        <option value="">Semua Kategori</option>
+                        <option value="pantai">Pantai</option>
+                        <option value="gunung">Gunung</option>
+                        <option value="pulau">Pulau</option>
+                        <option value="alam">Wisata Alam</option>
+                    </select>
+                </div>
+
+                <button type="button">Cari Destinasi</button>
+            </form>
+
+        </section>
+
+        <!-- Daftar Destinasi -->
+        <section class="all-destinations">
+
+            <div class="section-heading">
+                <h2>Semua Destinasi</h2>
+                <p>Pilih tempat wisata yang ingin kamu kunjungi.</p>
+            </div>
+
+            <div class="destination-list">
+
+                <article class="destination-card">
+                    <img src="assets/waigeo.jpg" alt="Pulau Waigeo">
+                    <h3>Pulau Waigeo</h3>
+                    <p>Raja Ampat, Papua Barat Daya</p>
+                    <p>Keindahan laut dan alam yang memukau.</p>
+                    <a href="#">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/batanta.jpg" alt="Pulau Batanta">
+                    <h3>Pulau Batanta</h3>
+                    <p>Raja Ampat, Papua Barat Daya</p>
+                    <p>Wisata alam dengan suasana yang menenangkan.</p>
+                    <a href="#">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/misool.jpg" alt="Pulau Misool">
+                    <h3>Pulau Misool</h3>
+                    <p>Raja Ampat, Papua Barat Daya</p>
+                    <p>Panorama laut biru dan pulau-pulau karst.</p>
+                    <a href="#">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/wayag.jpg" alt="Pulau Wayag">
+                    <h3>Pulau Wayag</h3>
+                    <p>Raja Ampat, Papua Barat Daya</p>
+                    <p>Pemandangan alam yang menjadi daya tarik wisata.</p>
+                    <a href="#">Lihat Detail</a>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 JelajahIn. Jelajahi Keindahan Indonesia.</p>
+    </footer>
+
+    <script src="https://unpkg.com"></script>
+
+</body>
+</html>

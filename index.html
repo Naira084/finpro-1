@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JelajahIn - Wisata Indonesia</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">JelajahIn</a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="destinasi.html">Paket Wisata</a></li>
+                <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+            </ul>
+
+            <div class="nav-button">
+                <a href="#">Masuk</a>
+                <a href="#">Daftar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>WAIGEO</h1>
+
+                <p>
+                    Pulau terbesar di Raja Ampat, tempat
+                    berbagai keindahan alam menanti.
+                </p>
+
+                <a href="destinasi.html">Jelajahi Sekarang</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/waigeo.jpg+" alt="Keindahan Pulau Waigeo">
+
+                <div class="other-destination">
+                    <div>
+                        <img src="assets/batanta.jpg" alt="Pulau Batanta">
+                        <h3>Batanta</h3>
+                    </div>
+
+                    <div>
+                        <img src="assets/misool.jpg" alt="Pulau Misool">
+                        <h3>Misool</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Destinasi -->
+        <section class="search-section">
+
+            <div class="search-filter">
+
+                <div class="filter-item">
+                    <label for="lokasi">Lokasi</label>
+                    <select id="lokasi" name="lokasi">
+                        <option value="">Pilih Lokasi</option>
+                        <option value="raja-ampat">Raja Ampat</option>
+                        <option value="bali">Bali</option>
+                        <option value="lombok">Lombok</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori">
+                        <option value="">Pilih Kategori</option>
+                        <option value="pantai">Pantai</option>
+                        <option value="gunung">Gunung</option>
+                        <option value="alam">Wisata Alam</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" id="tanggal" name="tanggal">
+                </div>
+
+                <div class="filter-item">
+                    <label for="wisatawan">Wisatawan</label>
+                    <select id="wisatawan" name="wisatawan">
+                        <option value="">Jumlah Wisatawan</option>
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                        <option value="4">4 Orang</option>
+                    </select>
+                </div>
+
+                <button type="button">Cari</button>
+
+            </div>
+        </section>
+
+        <!-- Rekomendasi Destinasi -->
+        <section class="destination-section">
+
+            <div class="section-heading">
+                <h2>Pulau Yang Wajib Dikunjungi</h2>
+                <p>
+                    Jelajahi keindahan pulau-pulau Indonesia
+                    dengan pemandangan yang menakjubkan.
+                </p>
+            </div>
+
+            <div class="destination-list">
+
+                <article class="destination-card">
+                    <img src="assets/waigeo.jpg" alt="Pulau Waigeo">
+                    <h3>Waigeo</h3>
+                    <p>Menikmati keindahan alam dan laut Raja Ampat.</p>
+                    <a href="destinasi.html">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/batanta.jpg" alt="Pulau Batanta">
+                    <h3>Batanta</h3>
+                    <p>Pulau dengan suasana alam yang indah dan tenang.</p>
+                    <a href="destinasi.html">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/misool.jpg" alt="Pulau Misool">
+                    <h3>Misool</h3>
+                    <p>Pesona laut biru dan gugusan pulau yang indah.</p>
+                    <a href="destinasi.html">Lihat Detail</a>
+                </article>
+
+                <article class="destination-card">
+                    <img src="assets/wayag.jpg" alt="Pulau Wayag">
+                    <h3>Wayag</h3>
+                    <p>Pemandangan pulau karst yang menjadi ikon Raja Ampat.</p>
+                    <a href="destinasi.html">Lihat Detail</a>
+                </article>
+
+            </div>
+
+            <a href="destinasi.html">Lihat Semua Destinasi</a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 JelajahIn. Jelajahi Keindahan Indonesia.</p>
+    </footer>
+
+</body>
+</html>

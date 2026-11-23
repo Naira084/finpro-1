@@ -115,6 +115,216 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+.hero-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 40px 60px;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--iced-denim) 55%, var(--frost) 100%);
+  color: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 45px;
+}
+
+.vertical-progress .dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.vertical-progress .line {
+  width: 2px;
+  height: 240px;
+  background-color: rgba(255, 255, 255, 0.45);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.active-circle {
+  width: 32px;
+  height: 32px;
+  background-color: var(--white);
+  color: var(--navy);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+  box-shadow: var(--shadow);
+  transition: top var(--transition);
+}
+
+.hero-content {
+  max-width: 440px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: var(--font);
+  font-size: 3.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 15px rgba(27, 75, 121, 0.25);
+}
+
+.hero-content p {
+  font-family: var(--sub-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  color: var(--iced);
+}
+
+.btn-jelajah {
+  display: inline-block;
+  padding: 13px 28px;
+  background-color: var(--pistachio);
+  color: var(--white);
+  font-family: var(--sub-font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-jelajah:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.slider-right {
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  z-index: 2;
+}
+
+.cards-container {
+  display: flex;
+  gap: 22px;
+  align-items: flex-end;
+}
+
+.card-item {
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.card-item h3 {
+  font-family: var(--sub-font);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--white);
+}
+
+.card-dots {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.card-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.card-dots span.filled {
+  background-color: var(--white);
+}
+
+.card-item img {
+  width: 175px;
+  height: 235px;
+  object-fit: cover;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow);
+  border: 2px solid transparent;
+  transition: all var(--transition);
+}
+
+.card-item:hover img {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-item.active img {
+  width: 245px;
+  height: 315px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-hover);
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding-right: 45px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-buttons button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all var(--transition);
+}
+
+.nav-buttons button:hover {
+  background-color: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--iced-denim);
+}
+
+.page-indicator .dash {
+  width: 35px;
+  height: 2px;
+  background-color: var(--iced-denim);
+  display: inline-block;
+}
+
 /* destination banner */
 .destination-banner {
     padding: 80px 20px;

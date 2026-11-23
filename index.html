@@ -35,10 +35,18 @@
     <main>
 
         <section class="hero">
-            <div class="hero-content">
-                <h1>WAIGEO</h1>
+            <div class="vertical-progress">
+                <div class="dot top-dot"></div>
+                <div class="line">
+                    <div class="active-circle" id="leftNumber">1</div>
+                </div>
+                <div class="dot bottom-dot"></div>
+            </div>
 
-                <p>
+            <div class="hero-content">
+                <h1 id="desTitle">WAIGEO</h1>
+
+                <p id="desDesc">
                     Pulau terbesar di Raja Ampat, tempat
                     berbagai keindahan alam menanti.
                 </p>
@@ -46,21 +54,24 @@
                 <a href="destinasi.html">Jelajahi Sekarang</a>
             </div>
 
-            <div class="hero-image">
-                <img src="assets/waigeo.jpg+" alt="Keindahan Pulau Waigeo">
+            <div class="slider-right">
 
-                <div class="other-destination">
-                    <div>
-                        <img src="assets/batanta.jpg" alt="Pulau Batanta">
-                        <h3>Batanta</h3>
+                <div class="cards-container" id="cardsContainer">
+                </div>
+
+                <div class="slider-controls">
+                    <div class="nav-buttons">
+                        <button id="prevBtn" aria-label="Sebelumnya">&lt;</button>
+                        <button id="nextBtn" aria-label="Selanjutnya">&gt;</button>
                     </div>
-
-                    <div>
-                        <img src="assets/misool.jpg" alt="Pulau Misool">
-                        <h3>Misool</h3>
+                    <div class="page-indicator">
+                        <span id="currentPage">01</span>
+                        <span class="dash">———</span>
+                        <span id="totalPage">04</span>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!-- Filter Destinasi -->

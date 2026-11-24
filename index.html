@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="shortcut icon" href="assets/faviconj.png" type="image/x-icon">
     <link rel="stylesheet" href="vanilla.css">
+=======
+>>>>>>> 214d15ea60bc0e78ed29cbecbfbedf66b8eaa197
     <title>JelajahIn - Wisata Indonesia</title>
 </head>
 
-<body>
+<body class="page-index">
 
     <!-- Navbar -->
     <header>
@@ -32,55 +35,62 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main>
+  
+<!-- Hero Section -->
+<main>
 
-        <section class="hero">
-            <div class="vertical-progress">
-                <div class="dot top-dot"></div>
-                <div class="line">
-                    <div class="active-circle" id="leftNumber">1</div>
-                </div>
-                <div class="dot bottom-dot"></div>
-            </div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-progress" id="scrollProgress">
+        <span class="scroll-dot top"></span>
 
-            <div class="hero-content">
-                <h1 id="desTitle">WAIGEO</h1>
+        <div class="scroll-track">
+            <span class="scroll-active" id="scrollActive"></span>
+        </div>
 
-                <p id="desDesc">
-                    Pulau terbesar di Raja Ampat, tempat
-                    berbagai keindahan alam menanti.
-                </p>
+        <span class="scroll-dot bottom"></span>
+    </div>
 
-                <a href="destinasi.html">Jelajahi Sekarang</a>
-            </div>
+    <section class="hero">
 
+        <!-- Hero Text -->
+        <div class="hero-content">
+            <h1 id="destTitle">WAIGEO</h1>
 
-            <div class="hero-image">
-                <img src="assets/waigeo.jpg" alt="Keindahan Pulau Waigeo">
+            <p id="destDesc">
+                Pulau terbesar di Raja Ampat, rumah bagi
+                burung-burung langka.
+            </p>
+
+            <a href="destinasi.html" class="btn-jelajah">
+                Jelajahi Sekarang --&gt;
+            </a>
+        </div>
+
+        <!-- Hero Slider -->
+        <div class="hero-image">
+
+            <!-- Gambar utama -->
+            <img src="assets/waigeo.jpg" alt="Pulau Waigeo" id="mainDestinationImage">
             <div class="slider-right">
 
+                <!-- kartu destinasi -->
+                <div class="cards-container" id="cardsContainer"></div>
 
-                <div class="cards-container" id="cardsContainer">
-                </div>
-
-                <div class="slider-controls">
-                    <div class="nav-buttons">
+                <!-- tombol slider -->
+                <div class="slider-controls"><div class="nav-buttons">
                         <button id="prevBtn" aria-label="Sebelumnya">&lt;</button>
-                        <button id="nextBtn" aria-label="Selanjutnya">&gt;</button>
-                    </div>
+                        <button id="nextBtn" aria-label="Selanjutnya">&gt;</button></div>
                     <div class="page-indicator">
                         <span id="currentPage">01</span>
                         <span class="dash">———</span>
-                        <span id="totalPage">04</span>
-                    </div>
+                        <span id="totalPage">04</span></div>
                 </div>
             </div>
-
-        </section>
+        </div>
+    </section>
 
         <!-- Filter Destinasi -->
-        <section class="search-section">
+        <section class="search-section" id="search-section">
 
             <div class="search-filter">
 
@@ -383,7 +393,10 @@
             <p>&copy; 2026 JelajahIn. All rights reserved.</p>
         </div>
     </footer>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 214d15ea60bc0e78ed29cbecbfbedf66b8eaa197
     <script src="js/script.js"></script>
 </body>
 

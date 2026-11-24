@@ -62,8 +62,12 @@ nav {
 }
 
 .logo {
+    margin-top: 1rem;
+}
+
+.logo a img{
     max-width: auto;
-    max-height: 0.2rem;
+    max-height: 2rem;
 }
 
 nav ul {

@@ -3,22 +3,22 @@ const destinations = [
   {
     name: "SALAWATI",
     desc: "Pulau eksotis dengan hutan tropis lebat dan keanekaragaman hayati bawah laut.",
-    image: "https://unsplash.com"
+    image: "assets/asset/salawatimain"
   },
   {
     name: "WAIGEO",
     desc: "Pulau terbesar di Raja Ampat, rumah bagi burung burung langka.",
-    image: "https://unsplash.com"
+    image: "assets/asset/waigeomain"
   },
   {
     name: "BATANTA",
     desc: "Terkenal dengan air terjun tersembunyi dan penginapan terapung di atas laut jernih.",
-    image: "https://unsplash.com"
+    image: "assets/asset/batantamain"
   },
   {
     name: "MISOOL",
     desc: "Gugusan pulau karang menakjubkan dengan laguna biru toska yang memanjakan mata.",
-    image: "https://unsplash.com"
+    image: "assets/asset/misoolmain"
   }
 ];
 

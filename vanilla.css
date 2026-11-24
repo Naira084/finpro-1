@@ -56,6 +56,10 @@ nav {
     font-family: var(--sub-font);
 }
 .logo {
+    margin-top: 1rem;
+}
+
+.logo a img{
     max-width: auto;
     max-height: 2rem;
 }

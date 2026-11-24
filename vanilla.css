@@ -37,8 +37,17 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: var(--frost);
-    color: var(--navy);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        180deg,
+        #5798D7 0%,     /* Atas (Hero Waigeo - Biru pekat) */
+        #DCE9F7 18%,    /* Tengah atas (Kartu Pulau & Aktivitas - Terang) */
+        #E6F1FA 38%,    /* Tengah (Paket 7-Day Tour - Sangat terang) */
+        #8CB4E0 55%,    /* Bagian Testimoni Pelanggan - Biru sedang */
+        #DCE9F7 75%,    /* Bagian Discover Indonesia - Terang kembali */
+        #93B8E2 100%    /* Bawah (Sign Up & Contact Us - Biru lembut) */
+    );
 }
 /* navbar */
 header {
@@ -72,7 +81,7 @@ nav ul {
 nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 500;
     transition: var(--transition);
     font-family: var(--font);

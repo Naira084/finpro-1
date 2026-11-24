@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vanilla.css">
     <title>JelajahIn - Wisata Indonesia</title>
     <link rel="stylesheet" href="vanilla.css">
 </head>
@@ -35,10 +36,18 @@
     <main>
 
         <section class="hero">
-            <div class="hero-content">
-                <h1>WAIGEO</h1>
+            <div class="vertical-progress">
+                <div class="dot top-dot"></div>
+                <div class="line">
+                    <div class="active-circle" id="leftNumber">1</div>
+                </div>
+                <div class="dot bottom-dot"></div>
+            </div>
 
-                <p>
+            <div class="hero-content">
+                <h1 id="desTitle">WAIGEO</h1>
+
+                <p id="desDesc">
                     Pulau terbesar di Raja Ampat, tempat
                     berbagai keindahan alam menanti.
                 </p>
@@ -46,21 +55,28 @@
                 <a href="destinasi.html">Jelajahi Sekarang</a>
             </div>
 
+
             <div class="hero-image">
                 <img src="assets/waigeo.jpg" alt="Keindahan Pulau Waigeo">
+            <div class="slider-right">
 
-                <div class="other-destination">
-                    <div>
-                        <img src="assets/batanta.jpg" alt="Pulau Batanta">
-                        <h3>Batanta</h3>
+
+                <div class="cards-container" id="cardsContainer">
+                </div>
+
+                <div class="slider-controls">
+                    <div class="nav-buttons">
+                        <button id="prevBtn" aria-label="Sebelumnya">&lt;</button>
+                        <button id="nextBtn" aria-label="Selanjutnya">&gt;</button>
                     </div>
-
-                    <div>
-                        <img src="assets/misool.jpg" alt="Pulau Misool">
-                        <h3>Misool</h3>
+                    <div class="page-indicator">
+                        <span id="currentPage">01</span>
+                        <span class="dash">———</span>
+                        <span id="totalPage">04</span>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!-- Filter Destinasi -->
@@ -156,11 +172,216 @@
 
         </section>
 
+        <section class="tes-sec">
+            <div class="line"></div>
+            <h2 class="tes-teks">Testimoni Pelanggan</h2>
+            <div class="line"></div>
+
+            <div class="testimoni-kotak">
+                <div class="kotak-pembungkus">
+                    <img src="" alt="">
+                    <div class="kotak">
+                        <h3>Anne Allis</h3>
+                        <p>Travelers</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="kotak-pembungkus">
+                    <img src="" alt="">
+                    <div class="kotak">
+                        <h3>Ashley Imy</h3>
+                        <p>Travelers</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="kotak-pembungkus">
+                    <img src="" alt="">
+                    <div class="kotak">
+                        <h3>Izz Farah</h3>
+                        <p>Travelers</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="disc-sect">
+            <div class="card-disc">
+                <h2>Discover The Beauty of <span>Indonesia</span></h2>
+                <p>From the misty peaks of Mount Bromo to the turquoise waters of Raja Ampat, Indonesia is home to
+                    thousands of
+                    breathtaking wonders waiting to be explored. Every island offers a unique blend of natural beauty
+                    and rich
+                    culture.</p>
+                <p>With Jelajahin, planning your dream getaway has never been easier. Discover top destinations, hidden
+                    gems,
+                    and curated travel guides tailored to make your journey truly unforgettable.</p>
+                <button>Jelajah Sekarang --&gt;</button>
+            </div>
+            <div class="gambar-dis">
+                <img src="" alt="">
+
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+
+        <section class="auth-contact-sec">
+            <div class="main-columns">
+                <!-- Sign Up -->
+                <div class="card-signup">
+                    <h2>Your next trip starts here.</h2>
+                    <p class="subtitle">Sign up and unlock exclusive deals, travel inspiration, and trips you'll be
+                        talking about for years.</p>
+
+                    <div class="social-buttons">
+                        <button type="button" class="btn-social">
+                            <img src="icon-google.svg" alt="Google"> Continue with Google
+                        </button>
+                        <button type="button" class="btn-social">
+                            <img src="icon-apple.svg" alt="Apple"> Continue with Apple
+                        </button>
+                        <button type="button" class="btn-social">
+                            <img src="icon-phone.svg" alt="Phone"> Continue with Phone
+                        </button>
+                    </div>
+
+                    <div class="divider">
+                        <span>Or</span>
+                    </div>
+
+                    <form class="signup-email-form">
+                        <div class="input-with-icon">
+                            <img src="icon-email.svg" alt="Email">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                    </form>
+
+                    <p class="signin-link">Already have an account? <a href="#">Sign in</a></p>
+
+                    <div class="community-info">
+                        <div class="avatar-group">
+                            <img src="user1.jpg" alt="Traveler 1">
+                            <img src="user2.jpg" alt="Traveler 2">
+                            <img src="user3.jpg" alt="Traveler 3">
+                            <img src="user4.jpg" alt="Traveler 4">
+                        </div>
+                        <div class="community-text">
+                            <strong>50k travelers can't be wrong</strong>
+                            <span>Join the community exploring the world with us</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- contact -->
+                <div class="card-contact">
+                    <h2>Contact Us.</h2>
+                    <p class="subtitle">Have question? We'd love to hear from you.</p>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Please enter your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Please enter your Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Please tell us something......"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-send">
+                            <img src="icon-send.svg" alt="Send"> Send Message
+                        </button>
+                    </form>
+
+                    <div class="divider-contact">
+                        <span>Connect With Us</span>
+                    </div>
+
+                    <div class="contact-links">
+                        <a href="#"><img src="icon-ig.svg" alt="Instagram"> @Jelajahin</a>
+                        <span class="separator">|</span>
+                        <a href="mailto:Jelajahin@gmail.com"><img src="icon-gmail.svg" alt="Gmail">
+                            Jelajahin@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- gambar -->
+                <div class="side-image">
+                    <img src="pemandangan-bromo.jpg" alt="Pemandangan Pegunungan Indonesia">
+                </div>
+
+            </div>
+
+            <!-- banner -->
+            <div class="bottom-banner">
+                <img src="icon-plane-left.svg" alt="Plane">
+                <p>EXPLORE THE BEAUTY OF INDONESIA ★ YOUR NEXT ADVENTURE STARTS HERE ★ DISCOVER MORE, TRAVEL MORE</p>
+                <img src="icon-plane-right.svg" alt="Plane">
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 JelajahIn. Jelajahi Keindahan Indonesia.</p>
+    <footer class="main-footer">
+        <div class="footer-box">
+
+            <!-- brand -->
+            <div class="footer-brand">
+                <h2 class="logo-text">Jelajah<span>In</span></h2>
+                <p>Explore More, Experience More.</p>
+                <div class="footer-socials">
+                    <a href="#"><img src="icon-ig-white.svg" alt="Instagram"></a>
+                    <a href="#"><img src="icon-tiktok-white.svg" alt="TikTok"></a>
+                    <a href="#"><img src="icon-yt-white.svg" alt="YouTube"></a>
+                </div>
+            </div>
+
+            <!-- navigasi -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#discover">Discover Indonesia</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- destinasi -->
+            <div class="footer-links">
+                <h4>Top Destinations</h4>
+                <ul>
+                    <li><a href="#">Gunung Bromo</a></li>
+                    <li><a href="#">Raja Ampat</a></li>
+                    <li><a href="#">Pantai Belitung</a></li>
+                    <li><a href="#">Nusa Penida</a></li>
+                </ul>
+            </div>
+
+            <!-- kontak & bantuan -->
+            <div class="footer-links">
+                <h4>Support & Contact</h4>
+                <ul>
+                    <li><a href="mailto:Jelajahin@gmail.com">Jelajahin@gmail.com</a></li>
+                    <li><a href="#">@Jelajahin</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Baris Copyright di Bawah Kotak -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 JelajahIn. All rights reserved.</p>
+        </div>
     </footer>
 
 

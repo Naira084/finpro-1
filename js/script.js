@@ -37,93 +37,98 @@ const totalPage = document.getElementById("totalPage");
 const scrollTrack = document.getElementById("scrollTrack");
 const scrollActive = document.getElementById("scrollActive");
 
-//mempercantik angka, menambah angka 0 diawal dan maksud 2 disitu ada 2 digit angka
-totalPage.textContent = String(destinations.length).padStart(2, "0");
+if (destTitle) {
+  //mempercantik angka, menambah angka 0 diawal dan maksud 2 disitu ada 2 digit angka
+  totalPage.textContent = String(destinations.length).padStart(2, "0");
 
-function makeDots() {
-  // bikin titik bulat di setiap foto
-  let dotsHTML = "";
-  for (let d = 0; d < 5; d++) {
-    // 4 titik penuh 1 redup
-    dotsHTML += `<span class="${d < 4 ? "filled" : ""}"></span>`;
+  function makeDots() {
+    // bikin titik bulat di setiap foto
+    let dotsHTML = "";
+    for (let d = 0; d < 5; d++) {
+      // 4 titik penuh 1 redup
+      dotsHTML += `<span class="${d < 4 ? "filled" : ""}"></span>`;
+    }
+    return dotsHTML;
   }
-  return dotsHTML;
-}
 
-//bikin huruf kapitalnya cuma didepan kata
-function formatName(name) {
-  return name.charAt(0) + name.slice(1).toLowerCase();
-}
-
-for (let i = 0; i < destinations.length; i++) {
-  const dot = document.createElement("span");
-  dot.className = "scroll-dot";
-  dot.style.top = `${(i / (destinations.length - 1)) * 100}%`;
-  scrollTrack.appendChild(dot);
-}
-
-//buat ganti slide
-function updateSlider() {
-  const activeData = destinations[currentIndex];
-  const activeName = formatName(activeData.name);
-
-  // mengupdate judul dan deskripsi
-  destTitle.textContent = activeData.name;
-  destDesc.textContent = activeData.desc;
-
-  mainImage.src = activeData.image;
-  mainImage.alt = "Pulau " + activeName;
-  mainName.textContent = activeName;
-  mainDots.innerHTML = makeDots();
-
-  // mengupdate indikator angka
-  const slideNumber = currentIndex + 1;
-  currentPage.textContent = String(slideNumber).padStart(2, "0");
-
-  // menggeser posisi dot putih di kiri
-  scrollActive.textContent = slideNumber;
-  scrollActive.style.top = `${(currentIndex / (destinations.length - 1)) * 100}%`;
-
-  // susun ulang kartu di kanan, supaya looping, infinity
-  cardsContainer.innerHTML = "";
-  for (let i = 1; i < destinations.length; i++) {
-    const itemIndex = (currentIndex + i) % destinations.length;
-    const item = destinations[itemIndex];
-
-    const card = document.createElement("div");
-    card.className = "card-item";
-
-    // bikin gambar jadi punya sensor sentuh, exm: kalo di pencet gambarnya jadi gede
-    card.addEventListener("click", () => {
-      currentIndex = itemIndex;
-      updateSlider();
-    });
-
-    const formattedName = formatName(item.name);
-
-    //bikin elemen baru di html
-    card.innerHTML = `
-      <h3>${formattedName}</h3>
-      <div class="card-dots">${makeDots()}</div>
-      <img src="${item.image}" alt="${formattedName}">
-    `;
-
-    //masukin kartu yang udh dimodif ke variabel card
-    cardsContainer.appendChild(card);
+  //bikin huruf kapitalnya cuma didepan kata
+  function formatName(name) {
+    return name.charAt(0) + name.slice(1).toLowerCase();
   }
+
+  for (let i = 0; i < destinations.length; i++) {
+    const dot = document.createElement("span");
+    dot.className = "scroll-dot";
+    dot.style.top = `${(i / (destinations.length - 1)) * 100}%`;
+    scrollTrack.appendChild(dot);
+  }
+
+  //buat ganti slide
+  function updateSlider() {
+    const activeData = destinations[currentIndex];
+    const activeName = formatName(activeData.name);
+
+    // mengupdate judul dan deskripsi
+    destTitle.textContent = activeData.name;
+    destDesc.textContent = activeData.desc;
+
+    mainImage.src = activeData.image;
+    mainImage.alt = "Pulau " + activeName;
+    mainName.textContent = activeName;
+    mainDots.innerHTML = makeDots();
+
+    // mengupdate indikator angka
+    const slideNumber = currentIndex + 1;
+    currentPage.textContent = String(slideNumber).padStart(2, "0");
+
+    // menggeser posisi dot putih di kiri
+    scrollActive.textContent = slideNumber;
+    scrollActive.style.top = `${(currentIndex / (destinations.length - 1)) * 100}%`;
+
+    // susun ulang kartu di kanan, supaya looping, infinity
+    cardsContainer.innerHTML = "";
+    for (let i = 1; i < destinations.length; i++) {
+      const itemIndex = (currentIndex + i) % destinations.length;
+      const item = destinations[itemIndex];
+
+      const card = document.createElement("div");
+      card.className = "card-item";
+
+      // bikin gambar jadi punya sensor sentuh, exm: kalo di pencet gambarnya jadi gede
+      card.addEventListener("click", () => {
+        currentIndex = itemIndex;
+        updateSlider();
+      });
+
+      const formattedName = formatName(item.name);
+
+      //bikin elemen baru di html
+      card.innerHTML = `
+        <h3>${formattedName}</h3>
+        <div class="card-dots">${makeDots()}</div>
+        <img src="${item.image}" alt="${formattedName}">
+      `;
+
+      //masukin kartu yang udh dimodif ke variabel card
+      cardsContainer.appendChild(card);
+    }
+  }
+
+  // tombol next
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % destinations.length;
+    updateSlider();
+  });
+
+  // tombol sebelum
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + destinations.length) % destinations.length;
+    updateSlider();
+  });
+
+  // manggil function
+  updateSlider();
 }
-
-// tombol next
-document.getElementById("nextBtn").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % destinations.length;
-  updateSlider();
-});
-
-// tombol sebelum
-document.getElementById("prevBtn").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + destinations.length) % destinations.length;
-  updateSlider();
-});
 
 document.querySelectorAll(".tab").forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -131,6 +136,3 @@ document.querySelectorAll(".tab").forEach((tab) => {
     tab.classList.add("active");
   });
 });
-
-// manggil function
-updateSlider();

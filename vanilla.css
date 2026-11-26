@@ -2218,6 +2218,10 @@ footer ul li a:hover {
         height: 260px;
     }
 
+    .main-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .side-image img {
         min-height: 0;
         height: 100%;

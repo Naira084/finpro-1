@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JelajahIn - Wisata Indonesia</title>
+    <link rel="shortcut icon" href="assets/faviconj.png" type="image/x-icon">
     <link rel="stylesheet" href="vanilla.css">
+    <title>JelajahIn - Wisata Indonesia</title>
 </head>
 
 <body class="page-index">
@@ -18,10 +19,10 @@
             </div>
 
             <ul>
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html">Aktivitas</a></li>
                 <li><a href="destinasi.html">Paket Wisata</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#kontak">Kontak</a></li>
             </ul>
 
             <div class="nav-button">
@@ -31,6 +32,7 @@
         </nav>
     </header>
 
+<<<<<<< HEAD
 
     <!-- Hero Section -->
     <main>
@@ -105,17 +107,63 @@
                         <option value="bali">Bali</option>
                         <option value="lombok">Lombok</option>
                     </select>
+=======
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-progress" id="scrollProgress">
+                <div class="scroll-track" id="scrollTrack">
+                    <span class="scroll-active" id="scrollActive">2</span>
+                </div>
+            </div>
+
+            <!-- Hero Text -->
+            <div class="hero-content">
+                <h1 id="destTitle">WAIGEO</h1>
+
+                <p id="destDesc">
+                    Pulau terbesar di Raja Ampat, rumah bagi
+                    burung-burung langka.
+                </p>
+
+                <a href="destinasi.html" class="btn-jelajah">
+                    Jelajahi Sekarang --&gt;
+                </a>
+            </div>
+
+            <!-- Hero Slider -->
+            <div class="hero-image">
+
+                <div class="slider-row">
+                    <!-- Gambar utama -->
+                    <div class="main-item">
+                        <h3 id="mainName">Waigeo</h3>
+                        <div class="card-dots" id="mainDots"></div>
+                        <img src="assets/waigeo.jpg" alt="Pulau Waigeo" id="mainDestinationImage">
+                    </div>
+
+                    <!-- kartu destinasi -->
+                    <div class="cards-container" id="cardsContainer"></div>
+
+                    <div class="page-indicator">
+                        <span id="currentPage">01</span>
+                        <span class="dash"></span>
+                        <span id="totalPage">04</span>
+                    </div>
+>>>>>>> 3036b95baa2ff6ee9919a90d111d7c9352c0d09e
                 </div>
 
-                <div class="filter-item">
-                    <label for="kategori">Kategori</label>
-                    <select id="kategori" name="kategori">
-                        <option value="">Pilih Kategori</option>
-                        <option value="pantai">Pantai</option>
-                        <option value="gunung">Gunung</option>
-                        <option value="alam">Wisata Alam</option>
-                    </select>
+                <!-- tombol slider -->
+                <div class="slider-controls">
+                    <div class="nav-buttons">
+                        <button id="prevBtn" aria-label="Sebelumnya">&lt;</button>
+                        <button id="nextBtn" aria-label="Selanjutnya">&gt;</button>
+                    </div>
                 </div>
+<<<<<<< HEAD
 
                 <div class="filter-item">
                     <label for="tanggal">Tanggal</label>
@@ -133,22 +181,25 @@
                     </select>
                 </div>
                 <button type="button">Cari</button>
+=======
+>>>>>>> 3036b95baa2ff6ee9919a90d111d7c9352c0d09e
             </div>
         </section>
 
-        <!-- Rekomendasi Destinasi -->
-        <section class="destination-section">
+        <!-- white card -->
+        <section class="travel-info-section" id="aktivitas">
 
-            <div class="section-heading">
-                <h2>Pulau Yang Wajib Dikunjungi</h2>
-                <p>
-                    Jelajahi keindahan pulau-pulau Indonesia
-                    dengan pemandangan yang menakjubkan.
-                </p>
-            </div>
+            <form class="search-filter" id="searchForm">
 
-            <div class="destination-list">
+                <div class="filter-tabs">
+                    <button type="button" class="tab active">Tur <span class="badge">-30%</span></button>
+                    <button type="button" class="tab">Hotel <span class="badge">-45%</span></button>
+                    <button type="button" class="tab">Tiket Pesawat <span class="badge">-50%</span></button>
+                    <button type="button" class="tab">Aktivitas <span class="badge">-20%</span></button>
+                    <button type="button" class="tab">Antar jemput <span class="badge">-35%</span></button>
+                </div>
 
+<<<<<<< HEAD
                 <article class="destination-card">
                     <img src="assets/asset/waigeo.png" alt="Pulau Waigeo">
                     <h3>Waigeo</h3>
@@ -176,68 +227,236 @@
                     <p>Pemandangan pulau karst yang menjadi ikon Raja Ampat.</p>
                     <a href="destinasi.html">Lihat Detail</a>
                 </article>
+=======
+                <div class="filter-row">
+                    <div class="filter-item">
+                        <label for="dari">Dari</label>
+                        <div class="field">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                            <select id="dari" name="dari">
+                                <option value="">Pilih Kota / Destinasi</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="surabaya">Surabaya</option>
+                                <option value="makassar">Makassar</option>
+                                <option value="sorong">Sorong</option>
+                            </select>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="ke">Ke</label>
+                        <div class="field">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                            <select id="ke" name="ke">
+                                <option value="">Pilih Kota / Destinasi</option>
+                                <option value="waigeo">Waigeo</option>
+                                <option value="batanta">Batanta</option>
+                                <option value="salawati">Salawati</option>
+                                <option value="misool">Misool</option>
+                            </select>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="tanggal">Berangkat</label>
+                        <div class="field">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zM5 10h14v10H5V10zm2 2v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg>
+                            <input type="date" id="tanggal" name="tanggal">
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="wisatawan">Penumpang</label>
+                        <div class="field">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-8 1.7-8 5v2h16v-2c0-3.3-4.7-5-8-5zm8-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm1 2.2c2.3.4 5 1.6 5 3.8v2h-4v-2c0-1.6-.4-2.9-1-3.8z"/></svg>
+                            <select id="wisatawan" name="wisatawan">
+                                <option value="1">1 Dewasa</option>
+                                <option value="2">2 Dewasa</option>
+                                <option value="3">3 Dewasa</option>
+                                <option value="4">4 Dewasa</option>
+                                <option value="5">5 Dewasa</option>
+                                <option value="6">6 Dewasa</option>
+                            </select>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-cari">Cari <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+                </div>
+            </form>
+
+            <div class="main-white-card">
+
+                <div class="island-block">
+                    <h2>Pulau Yang Wajib Dikunjungi</h2>
+                    <p class="section-subtitle">Empat pulau besar dan lebih dari 1.500 pulau kecil menunggu kamu.</p>
+
+                    <div class="island-grid">
+                        <!-- Kartu Waigeo -->
+                        <div class="island-card" style="background-image: url('assets/asset/waigeomain.jpg');">
+                            <div class="island-overlay">
+                                <h3>Waigeo</h3>
+                                <p>Pulau terbesar, rumah bagi burung langka dan kota Waisai.</p>
+                            </div>
+                        </div>
+
+                        <!-- Kartu Batanta -->
+                        <div class="island-card" style="background-image: url('assets/asset/batantamain.jpg');">
+                            <div class="island-overlay">
+                                <h3>Batanta</h3>
+                                <p>Puncak tertinggi kepulauan: Gunung Batanta, 1.184 m.</p>
+                            </div>
+                        </div>
+
+                        <!-- Kartu Salawati -->
+                        <div class="island-card" style="background-image: url('assets/asset/salawatimain.jpg');">
+                            <div class="island-overlay">
+                                <h3>Salawati</h3>
+                                <p>Flora dan fauna khatulistiwa yang masih asri.</p>
+                            </div>
+                        </div>
+
+                        <!-- Kartu Misool -->
+                        <div class="island-card" style="background-image: url('assets/asset/misoolmain.jpg');">
+                            <div class="island-overlay">
+                                <h3>Misool</h3>
+                                <p>Paling terpencil dan paling memukau. Favorit untuk tur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-block">
+                    <h2>Yang Bisa Kamu Lakukan</h2>
+                    <p class="section-subtitle">Dari snorkeling sampai menyusuri gua menuju danau tersembunyi.</p>
+
+                    <div class="activity-grid">
+                        <div class="activity-card">
+                            <img src="assets/asset/snorkeling.jpg" alt="Snorkeling">
+                            <div class="activity-content">
+                                <h3>Snorkeling</h3>
+                                <p>Berenang bersama ikan karang, pari manta, dan penyu di salah satu laut terkaya di
+                                    dunia.</p>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <img src="assets/asset/ubur-ubur.jpg" alt="Danau Ubur-ubur">
+                            <div class="activity-content">
+                                <h3>Danau Ubur-ubur</h3>
+                                <p>Berenang bersama ubur-ubur tak menyengat di danau payau di dalam pulau karang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prep-block">
+                    <h2>Persiapkan Perjalananmu</h2>
+                    <p class="section-subtitle">Informasi penting sebelum menjelajahi Raja Ampat.</p>
+
+                    <div class="prep-grid">
+                        <div class="prep-card">
+                            <span class="prep-tag">Essentials</span>
+                            <h4>Prepare for<br>your Trip</h4>
+                            <div class="prep-icon">
+                                <img src="assets/asset/icon-trip.svg" alt="Trip">
+                            </div>
+                        </div>
+
+                        <div class="prep-card">
+                            <span class="prep-tag">Essentials</span>
+                            <h4>Emergency<br>numbers</h4>
+                            <div class="prep-icon">
+                                <img src="assets/asset/icon-emergency.svg" alt="Emergency">
+                            </div>
+                        </div>
+
+                        <div class="prep-card">
+                            <span class="prep-tag">Essentials</span>
+                            <h4>Medical<br>assistance</h4>
+                            <div class="prep-icon">
+                                <img src="assets/asset/icon-medical.svg" alt="Medical">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> 3036b95baa2ff6ee9919a90d111d7c9352c0d09e
 
             </div>
 
-            <a href="destinasi.html">Lihat Semua Destinasi</a>
+            <div class="promo-banner-card">
+                <div class="promo-left">
+                    <span class="badge-eksklusif">PAKET EKSKLUSIF</span>
+                    <h2>7-Day Raja Ampat Island Tour</h2>
+                    <p>Island hopping, penginapan, semua ekskursi, pemandu, dan transfer darat &amp; laut. Maks 7 orang.
+                    </p>
+                </div>
+
+                <div class="promo-price-box">
+                    <span class="price-label">mulai dari</span>
+                    <h3 class="price-idr">Rp 34.750.000</h3>
+                    <span class="price-usd">USD 1.930</span>
+                </div>
+            </div>
 
         </section>
 
-        <section class="tes-sec">
-            <div class="line"></div>
-            <h2 class="tes-teks">Testimoni Pelanggan</h2>
-            <div class="line"></div>
+        <section class="tes-sec" id="testimoni">
+            <div class="tes-heading">
+                <div class="line"></div>
+                <h2 class="tes-teks">Testimoni Pelanggan</h2>
+                <div class="line"></div>
+            </div>
 
             <div class="testimoni-kotak">
                 <div class="kotak-pembungkus">
-                    <img src="" alt="">
+                    <img src="" alt="Anne Allis">
                     <div class="kotak">
                         <h3>Anne Allis</h3>
-                        <p>Travelers</p>
+                        <p class="subjudul">Travelers</p>
                         <p></p>
                     </div>
                 </div>
                 <div class="kotak-pembungkus">
-                    <img src="" alt="">
+                    <img src="" alt="Ashley Imy">
                     <div class="kotak">
                         <h3>Ashley Imy</h3>
-                        <p>Travelers</p>
+                        <p class="subjudul">Travelers</p>
                         <p></p>
                     </div>
                 </div>
                 <div class="kotak-pembungkus">
-                    <img src="" alt="">
+                    <img src="" alt="Izz Farah">
                     <div class="kotak">
                         <h3>Izz Farah</h3>
-                        <p>Travelers</p>
+                        <p class="subjudul">Travelers</p>
                         <p></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="disc-sect">
+        <section class="disc-sect" id="discover">
             <div class="card-disc">
                 <h2>Discover The Beauty of <span>Indonesia</span></h2>
                 <p>From the misty peaks of Mount Bromo to the turquoise waters of Raja Ampat, Indonesia is home to
-                    thousands of
-                    breathtaking wonders waiting to be explored. Every island offers a unique blend of natural beauty
-                    and rich
-                    culture.</p>
+                    thousands of breathtaking wonders waiting to be explored. Every island offers a unique blend of
+                    natural beauty and rich culture.</p>
                 <p>With Jelajahin, planning your dream getaway has never been easier. Discover top destinations, hidden
-                    gems,
-                    and curated travel guides tailored to make your journey truly unforgettable.</p>
-                <button>Jelajah Sekarang --&gt;</button>
+                    gems, and curated travel guides tailored to make your journey truly unforgettable.</p>
+                <a href="#" class="btn-disc">Jelajah Sekarang --&gt;</a>
             </div>
             <div class="gambar-dis">
-                <img src="" alt="">
-
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="" alt="Gunung Bromo">
+                <img src="" alt="Raja Ampat">
+                <img src="" alt="Pantai Indonesia">
             </div>
         </section>
 
-        <section class="auth-contact-sec">
+        <section class="auth-contact-sec" id="kontak">
             <div class="main-columns">
                 <!-- Sign Up -->
                 <div class="card-signup">
@@ -247,13 +466,13 @@
 
                     <div class="social-buttons">
                         <button type="button" class="btn-social">
-                            <img src="icon-google.svg" alt="Google"> Continue with Google
+                            <img src="assets/asset/google.png" alt="Google" class="sosmed"> Continue with Google
                         </button>
                         <button type="button" class="btn-social">
-                            <img src="icon-apple.svg" alt="Apple"> Continue with Apple
+                            <img src="assets/asset/apple.png" alt="Apple" class="sosmed"> Continue with Apple
                         </button>
                         <button type="button" class="btn-social">
-                            <img src="icon-phone.svg" alt="Phone"> Continue with Phone
+                            <img src="assets/asset/phone.png" alt="Phone" class="sosmed"> Continue with Phone
                         </button>
                     </div>
 
@@ -263,7 +482,7 @@
 
                     <form class="signup-email-form">
                         <div class="input-with-icon">
-                            <img src="icon-email.svg" alt="Email">
+                            <img src="assets/asset/email-auth.png" alt="Email" class="sosmed">
                             <input type="email" placeholder="Email Address" required>
                         </div>
                     </form>
@@ -307,7 +526,7 @@
                         </div>
 
                         <button type="submit" class="btn-send">
-                            <img src="icon-send.svg" alt="Send"> Send Message
+                            <img src="icon-send.svg" alt="" class="sosmed"> Send Message
                         </button>
                     </form>
 
@@ -316,10 +535,10 @@
                     </div>
 
                     <div class="contact-links">
-                        <a href="#"><img src="icon-ig.svg" alt="Instagram"> @Jelajahin</a>
+                        <a href="#"><img src="assets/asset/insta.png" alt="Instagram" class="sosmed"> @Jelajahin</a>
                         <span class="separator">|</span>
-                        <a href="mailto:Jelajahin@gmail.com"><img src="icon-gmail.svg" alt="Gmail">
-                            Jelajahin@gmail.com</a>
+                        <a href="mailto:Jelajahin@gmail.com"><img src="assets/asset/gmail.png" alt="Gmail"
+                                class="sosmed"> Jelajahin@gmail.com</a>
                     </div>
                 </div>
 
@@ -327,7 +546,6 @@
                 <div class="side-image">
                     <img src="pemandangan-bromo.jpg" alt="Pemandangan Pegunungan Indonesia">
                 </div>
-
             </div>
 
             <!-- banner -->
@@ -360,8 +578,8 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#discover">Discover Indonesia</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#testimoni">Testimonials</a></li>
+                    <li><a href="#kontak">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -378,7 +596,7 @@
 
             <!-- kontak & bantuan -->
             <div class="footer-links">
-                <h4>Support & Contact</h4>
+                <h4>Support &amp; Contact</h4>
                 <ul>
                     <li><a href="mailto:Jelajahin@gmail.com">Jelajahin@gmail.com</a></li>
                     <li><a href="#">@Jelajahin</a></li>
@@ -394,6 +612,7 @@
             <p>&copy; 2026 JelajahIn. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 

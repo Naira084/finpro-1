@@ -164,6 +164,39 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
 }
 
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+nav.open .hamburger span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+nav.open .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+nav.open .hamburger span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
 /* hero sect */
 .hero {
     width: 90%;
@@ -1893,6 +1926,12 @@ footer ul li a:hover {
         width: 210px;
     }
 
+    .scroll-progress {
+        left: 12px;
+        top: 40%;
+        height: 280px;
+    }
+
     .card-item img {
         width: 150px;
         height: 200px;
@@ -1909,6 +1948,210 @@ footer ul li a:hover {
 
     .disc-sect {
         height: auto;
+        aspect-ratio: 1150 / 576;
+    }
+
+    .card-disc {
+        top: 8.16%;
+        height: 91.84%;
+        padding: 5.7% 4.2% 0;
+    }
+
+    .card-disc h2 {
+        font-size: clamp(20px, 2.7vw, 32px);
+        margin-bottom: 14px;
+    }
+
+    .card-disc p {
+        font-size: clamp(11px, 1.1vw, 13px);
+        margin-bottom: 12px;
+    }
+
+    .btn-disc {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .gambar-dis img:nth-child(1) {
+        height: 39.76%;
+        transform: translateX(20%);
+    }
+
+    .gambar-dis img:nth-child(2) {
+        top: 8.16%;
+        height: 78.47%;
+    }
+
+    .gambar-dis img:nth-child(3) {
+        top: 68.06%;
+        height: 31.94%;
+    }
+
+    .destination-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 14px;
+        padding: 10px 0;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav ul li a {
+        font-size: 0.67rem;
+    }
+
+    .scroll-progress {
+        left: 12px;
+        top: 29%;
+        height: 280px;
+    }
+
+    body {
+        zoom: 0.8;
+    }
+
+    .scroll-active {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .scroll-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        gap: 20px;
+        padding: 30px 10px 50px 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-jelajah {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+
+    .hero-image {
+        gap: 18px;
+    }
+
+    .slider-row {
+        gap: 14px;
+    }
+
+    .main-item h3,
+    .card-item h3 {
+        font-size: 0.85rem;
+    }
+
+    .main-item > img {
+        width: 170px;
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .cards-container {
+        gap: 12px;
+    }
+
+    .card-item img {
+        width: 115px;
+        height: 160px;
+        border-radius: 16px;
+    }
+
+    .nav-buttons {
+        width: 170px;
+    }
+
+    .nav-buttons button {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .page-indicator {
+        right: 10px;
+        gap: 8px;
+        font-size: 0.75rem;
+    }
+
+    .page-indicator .dash {
+        width: 40px;
+    }
+
+    .travel-info-section {
+        padding: 3rem 0;
+    }
+
+    .island-block h2 {
+        margin-top: 1rem;
+    }
+
+    .search-filter {
+        padding: 24px;
+        border-radius: 30px;
+    }
+
+    .main-white-card {
+        padding: 100px 24px 40px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid .activity-card:nth-child(2) {
+        margin-top: 1rem;
+    }
+
+    .island-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimoni-kotak {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .promo-banner-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .promo-price-box {
+        width: 100%;
+    }
+
+    .tes-heading {
+        margin-bottom: 60px;
+    }
+
+    .disc-sect {
+        aspect-ratio: auto;
         display: grid;
         gap: 20px;
     }
@@ -1920,9 +2163,17 @@ footer ul li a:hover {
         padding: 40px 32px;
     }
 
+    .card-disc h2 {
+        font-size: 28px;
+    }
+
     .card-disc h2,
     .card-disc p {
         max-width: none;
+    }
+
+    .card-disc p {
+        font-size: 13px;
     }
 
     .gambar-dis {
@@ -1944,119 +2195,32 @@ footer ul li a:hover {
         height: 280px;
     }
 
-    .main-columns {
-        grid-template-columns: 1fr 1fr;
+    .gambar-dis img:nth-child(1) {
+        transform: translateX(0);
+        border: none;
     }
 
-    .side-image {
-        grid-column: 1 / -1;
-    }
-
-    .side-image img {
-        min-height: 0;
-        height: 260px;
-    }
-
-    .destination-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .scroll-progress {
-        display: none;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        row-gap: 14px;
-        padding: 10px 0;
-    }
-
-    .logo img {
-        width: 130px;
-    }
-
-    nav ul {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 18px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 0 50px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-    }
-
-    .slider-row {
-        justify-content: center;
-    }
-
-    .slider-controls {
-        flex-direction: column;
-        gap: 16px;
-        padding-right: 0;
-    }
-
-    .page-indicator {
-        position: static;
-    }
-
-    .search-filter {
-        padding: 24px;
-        border-radius: 30px;
-    }
-
-    .filter-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main-white-card {
-        padding: 100px 24px 40px;
-    }
-
-    .island-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .activity-grid,
-    .prep-grid,
-    .testimoni-kotak,
-    .main-columns {
-        grid-template-columns: 1fr;
-    }
-
-    .testimoni-kotak {
-        gap: 60px;
-    }
-
-    .promo-banner-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .promo-price-box {
-        width: 100%;
-    }
-
-    .tes-heading {
-        margin-bottom: 60px;
+    .gambar-dis img:nth-child(3) {
+        border: none;
     }
 
     .bottom-banner {
         padding: 10px 16px;
         gap: 12px;
+    }
+
+    .main-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .main-columns > .side-image {
+        grid-column: 1 / -1;
+        height: 260px;
+    }
+
+    .side-image img {
+        min-height: 0;
+        height: 100%;
     }
 
     .plane {
@@ -2065,7 +2229,21 @@ footer ul li a:hover {
     }
 
     .footer-box {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:repeat(3, 2fr);
+        text-align: left;
+        gap: 30px;
+    }
+
+    .footer-box > :first-child {
+        grid-column: 1 / -1;
+    }
+
+    footer .logo img {
+        margin: 0;
+    }
+
+    .footer-socials {
+        justify-content: flex-start;
     }
 
     .destination-banner {
@@ -2091,23 +2269,95 @@ footer ul li a:hover {
     .destination-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 @media (max-width: 450px) {
-    nav ul {
-        gap: 12px;
+    .scroll-progress {
+        display: none;
     }
 
-    nav ul li a {
-        font-size: 11px;
+        nav {
+        flex-wrap: wrap;
+        min-height: 64px;
+        padding: 10px 0;
+        gap: 0;
     }
 
-    .nav-button a {
-        padding: 8px 14px;
+    .logo img {
+        width: 120px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul,
+    .nav-button {
+        display: none;
+        width: 100%;
+    }
+
+    nav.open ul {
+        display: flex;
+        order: 3;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        margin-top: 12px;
+        padding: 16px 18px 8px;
+        border-radius: 18px 18px 0 0;
+        background: var(--navy);
+    }
+
+    nav.open ul li {
+        width: 100%;
+    }
+
+    nav.open ul li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    nav.open .nav-button {
+        display: flex;
+        order: 4;
+        padding: 8px 18px 18px;
+        border-radius: 0 0 18px 18px;
+        background: var(--navy);
+    }
+
+    nav.open .nav-button a {
+        flex: 1;
+        text-align: center;
+        padding: 10px 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        gap: 36px;
+        padding: 20px 0 50px;
+    }
+
+    .hero-image {
+        order: -1;
+        width: 100%;
+    }
+
+    .hero-content {
+        max-width: 100%;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
     }
 
     .main-item {
@@ -2116,15 +2366,26 @@ footer ul li a:hover {
 
     .main-item > img {
         width: 100%;
-        height: 300px;
+        height: 320px;
+        border-radius: 28px;
     }
 
     .cards-container {
         display: none;
     }
 
+    .slider-controls {
+        flex-direction: column;
+        gap: 14px;
+        padding-right: 0;
+    }
+
     .nav-buttons {
         width: 100%;
+    }
+
+    .page-indicator {
+        position: static;
     }
 
     .search-filter {
@@ -2204,6 +2465,10 @@ footer ul li a:hover {
 
     .footer-box {
         text-align: center;
+    }
+
+    footer .logo img {
+        margin: 0 auto;
     }
 
     .footer-socials {

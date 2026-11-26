@@ -141,3 +141,20 @@ document.querySelectorAll(".tab").forEach((tab) => {
     tab.classList.add("active");
   });
 });
+
+const nav = document.querySelector('nav');
+const hamburger = document.querySelector('.hamburger');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    nav.querySelectorAll('ul a').forEach((link) => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', false);
+        });
+    });
+}

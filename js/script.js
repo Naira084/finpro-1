@@ -126,6 +126,11 @@ if (destTitle) {
     updateSlider();
   });
 
+  const scrollProgress = document.getElementById("scrollProgress");
+  new IntersectionObserver(([entry]) => {
+    scrollProgress.classList.toggle("hide", !entry.isIntersecting);
+  }, { threshold: 0.4 }).observe(document.getElementById("home"));
+
   // manggil function
   updateSlider();
 }

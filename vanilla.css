@@ -83,6 +83,10 @@ body {
             #93B8E2 100%);
 }
 
+html, body {
+    overflow-x: clip;
+}
+
 a {
     text-decoration: none;
 }

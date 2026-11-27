@@ -2121,11 +2121,7 @@ footer ul li a:hover {
     }
 
     .activity-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .activity-grid .activity-card:nth-child(2) {
-        margin-top: 1rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .island-grid {
@@ -2133,7 +2129,7 @@ footer ul li a:hover {
     }
 
     .testimoni-kotak {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 60px;
     }
 
@@ -2214,6 +2210,7 @@ footer ul li a:hover {
     }
 
     .main-columns > .side-image {
+        grid-template-columns: repeat(2, 1fr);
         grid-column: 1 / -1;
         height: 260px;
     }
@@ -2414,6 +2411,16 @@ footer ul li a:hover {
     .main-white-card h2,
     .section-heading h2 {
         font-size: 22px;
+    }
+
+    .activity-grid,
+    .testimoni-kotak,
+    .main-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid .activity-card :nth-child(2) {
+        margin-top: 0.1px;
     }
 
     .promo-banner-card {

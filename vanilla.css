@@ -2116,6 +2116,10 @@ footer ul li a:hover {
         border-radius: 30px;
     }
 
+    .filter-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .main-white-card {
         padding: 100px 24px 40px;
     }
